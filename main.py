@@ -60,15 +60,10 @@ if __name__ == "__main__":
     tokioStream = Stream(auth=api.auth, listener=CustomStreamListener())
     cdmxStream = Stream(auth=api.auth, listener=CustomStreamListener())
 
-    #  Day 1 Script ran the next stream:
     keywordsStream.filter(track=['#Something', '#AnotherThing', '#MoreThings', '#Hi'])
 
-    #  -100.44,25.64,-100.13,25.84 MTY
     bayAreaStream.filter(locations=[-122.53, 37.48, -121.94, 37.89])
-    #  -111.02,29.02,-110.90,29.14 HMO
     tokioStream.filter(locations=[139.72, 35.66, 139.78, 35.71])
-    #  -99.30,19.21, -98.85, 19.54 DF
     cdmxStream.filter(locations=[-99.30, 19.21, -98.85, 19.54])
 
-    #  Day 3 Script ran with the next keywords:
-    keywordsStream.filter(track=['Keyword1', 'Keyword2', 'Keyword3','Keyword4'])
+    keywordsStream.filter(track=['Keyword1', 'Keyword2', 'Keyword3', 'Keyword4'])
